@@ -15,7 +15,7 @@ export const Navbar = () => {
                     <ul className="navbar-nav text-uppercase ml-auto">
                         {/* <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#about">Company</a></li> */}
                         <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#products">Products</a></li>
-                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+                        <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#reference">Reference Sites</a></li>
                         <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#services">Services</a></li>                        
                         <li className="nav-item"><a className="nav-link js-scroll-trigger" href="#contactus">Contact Us</a></li>
                     </ul>

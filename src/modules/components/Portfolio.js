@@ -5,10 +5,10 @@ import React from 'react';
 export const Portfolio = () => {
     return (
         <React.Fragment>
-        <section class="page-section bg-light" id="portfolio">
+        <section class="page-section bg-light" id="reference">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="text-primary text-left my-4">Portfolio</h2>
+                    <h2 class="text-primary text-left my-4">Reference Sites</h2>
                     {/* <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3> */}
                 </div>
                 <div class="row">

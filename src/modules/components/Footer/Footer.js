@@ -1,15 +1,15 @@
 import React, {useState} from "react";
 import { Container, Row, Col } from "reactstrap";
-// import Modal from 'react-bootstrap/Modal';
+import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-// import privacyPolicy from "../privacy.data";
+import PrivacyPolicy from "../privacy.data";
 
 
 
 
 export const Footer = () => {
-  // const [ modalShow, setModalShow] = useState(false);
-  // const [ privacyModalShow, setPrivacyModalShow] = useState(false);
+  const [ modalShow, setModalShow] = useState(false);
+  const [ privacyModalShow, setPrivacyModalShow] = useState(false);
 
     return (
         <Container fluid className="bg-info px-0 mx-0">
@@ -28,8 +28,8 @@ export const Footer = () => {
                 </Col>
                 <Col lg={3} md={6} sm={12} xs={12} className="mt-5 h-50">
                   <h5 className="mb-4">Social</h5>
-                  <a href='#'><i className="fa fa-facebook-official text-white" aria-hidden="true"></i> Facebook</a> | <a href='#'><i className="fa fa-youtube text-white" aria-hidden="true"></i> Youtube </a> | 
-                  <a href='#'><i className="fa fa-twitter text-white" aria-hidden="true"></i> Twitter </a> | <a href='#'><i className="fa fa-linkedin text-white" aria-hidden="true"></i> Linkedin</a>
+                  <a href='#'><i className="fa fa-facebook-official text-white" aria-hidden="true"></i> </a> | <a href='#'><i className="fa fa-youtube text-white" aria-hidden="true"></i>  </a> | 
+                  <a href='#'><i className="fa fa-twitter text-white" aria-hidden="true"></i>  </a> | <a href='#'><i className="fa fa-linkedin text-white" aria-hidden="true"></i> </a>
                 </Col>
               
                 <Col lg={3} md={6} sm={12} xs={12} className="mt-5 h-50">
@@ -40,28 +40,28 @@ export const Footer = () => {
             </Row>
             <Row className="justify-content-center w-100">
             <hr className="mt-5" />
-                <Col lg={6} md={6} sm={12} xs={12} className="d-flex justify-content-center mt-2">
+                <Col lg={12} xs={12}>
                 <p>Copyright © Volkslift Philippines 2020</p>
                 </Col>
                 {/* <Col lg={6} md={6} sm={12} xs={12} className="d-flex justify-content-center">
                 <a class='mx-4' onClick={() => setPrivacyModalShow(true)}> Privacy Policy </a>  |  <a class='mx-4' onClick={() => setModalShow(true)}>
                   Terms and Agreement
                 </a>
-                </Col> */}
-                {/* <Terms
+                </Col>
+                 <Terms
                   show={modalShow}
                   onHide={() => setModalShow(false)}
                 />
                 <Privacy
                   show={privacyModalShow}
                   onHide={() => setPrivacyModalShow(false)}
-                /> */}
+                />  */}
                 
                   {/* <h5>PRIVACY INFORMATION AND COOKIES</h5> */}
                   {/* {PrivacyPolicy.map((terms, index) => (
                     <privacy index={index} terms={terms} key={index} />
-                  ))} */}
-                   {/* {PrivacyPolicy.map((terms, index) => (
+                  ))} 
+                  {PrivacyPolicy.map((terms, index) => (
                     <Privacy index={index} terms={terms} key={index} show={privacyModalShow}
                     onHide={() => setPrivacyModalShow(false)}/>
                   ))} */}

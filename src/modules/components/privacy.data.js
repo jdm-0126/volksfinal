@@ -1,4 +1,4 @@
-const privacyPolicy = [{
+const PrivacyPolicy = [{
     id: 1,
     title: ``,
     content: `Volkslift Phil. is committed to ensuring that your privacy is protected. This Privacy Information sets out the basis on which any personal data we collect from you, or that you provide to us will be processed by us.
@@ -95,4 +95,4 @@ const privacyPolicy = [{
 },
 ]
 
-export default privacyPolicy
+export default PrivacyPolicy

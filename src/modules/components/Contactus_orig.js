@@ -1,8 +1,8 @@
 import React, { useState }  from 'react'
 import { Row, Col, Container, Button } from 'reactstrap'
-import Alert from 'react-bootstrap/Alert'
+// import Section from '../../components/section-row/Section'
 import Form from 'react-bootstrap/Form'
-// import  { db } from '../../firebase';
+import  { db } from '../../firebase';
 import Modal from 'react-bootstrap/Modal';
 import privacyPolicy from "./privacy.data";
 import axios from 'axios'
@@ -17,7 +17,6 @@ export const ContactUs = () => {
   // const [dateTime, setDate] = useState('');
   const [agreement, setAgreement] = useState(false);
   const [ modalShow, setModalShow] = useState(false);
-  const [show, setShow] = useState(false);
   const [ privacyModalShow, setPrivacyModalShow] = useState(false);
   // const [sendTo, setSendTo] = useState('volksliftphil@gmail.com');
 
@@ -28,28 +27,8 @@ export const ContactUs = () => {
   // });
 
   const handleSubmit = (e) => {
-
-    // const messageHtml =  renderEmail(
-    //   <MyEmail name={firstName}> {feedback}</MyEmail>
-    // );
-
-  //   axios({
-  //     method: "POST", 
-  //     url:"http://localhost:9000/sendEmail", 
-  //     data: {
-  //       name: this.state.name,
-  //       email: this.state.email,
-  //       messageHtml: messageHtml
-  //     }
-  //   }).then((response)=>{
-  //     if (response.data.msg === 'success'){
-  //         alert("Email sent, awesome!"); 
-  //         this.resetForm()
-  //     }else if(response.data.msg === 'fail'){
-  //         alert("Oops, something went wrong. Try again")
-  //     }
-  // })
     const form = e.currentTarget;
+    let newDay = new Date();
     if (form.checkValidity() === false) {
       e.stopPropagation();
       e.preventDefault();    
@@ -66,24 +45,34 @@ export const ContactUs = () => {
           phone: phone,
           message: message,
         }
-      })
-      .then(setShow(true))
-      .then(() => window.location = '/')
+      }); 
+      // db.collection('inquiries').add({
+        // firstName: firstName,
+        // lastName: lastName,
+        // email: email,
+        // phone: phone,
+        // message: message,
+        // agreement: agreement,
+      //   // sendTo: sendTo,
+      // }).then(() => {
+      //   alert('Message has been submitted');
+      // }).catch(error => {
+      //   alert(error.message)
+      // });
       setValidated(true);
       setAgreement(true); 
-      // setFirstName('');
-      // setLastName('');
-      // setEmail('');
-      // setPhone('');
-      // setMessage('');
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPhone('');
+      setMessage('');
       // setDate(newDay)
       // setSendTo('');
-   }
+    }
     setValidated(true);    
     setAgreement(true); 
   };
  
-
     return (
         <Container fluid className="px-0">
             <Container fluid className="bg-primary py-5 mb-5" id="contactus">
@@ -95,14 +84,6 @@ export const ContactUs = () => {
                 </Row>
               </Container>
             </Container>
-            <Container>
-                {show ? 
-                  <Alert variant="success" onClose={() => setShow(false)} dismissible>
-                  <Alert>Success!</Alert>
-                </Alert> 
-                  : "" }
-            </Container>
-
             <Container id="section-2" className="py-5">
               <Row className="mb-5">
                 <Col className="d-flex flex-column align-items-center justify-content-center">
