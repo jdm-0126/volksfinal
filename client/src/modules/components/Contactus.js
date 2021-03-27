@@ -52,7 +52,7 @@ const ContactUs = () => {
       axios({
         method: 'post',
         // url: 'api.volksliftphil.com/sendmail',
-        url: 'http://api.volksliftphil.com/sendEmail',
+        url: 'https://volksliftapi.herokuapp.com/sendEmail',
         data: {
           firstName: firstName,
           lastName: lastName,
