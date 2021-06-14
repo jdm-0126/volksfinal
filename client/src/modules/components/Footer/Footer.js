@@ -19,7 +19,7 @@ export const Footer = () => {
                 </Col>
                 <Col lg={3} md={6} sm={12} xs={12} className=" h-50">
                   <h5 className="d-block text-white">Social</h5>
-                  <a className="text-white" href='#'><i className="fa fa-facebook-official " aria-hidden="true"></i> Facebook</a> | <a className="text-white" href='#'><i className="fa fa-youtube text-white" aria-hidden="true"></i> Youtube </a> | 
+                  <a className="text-white" href='https://www.facebook.com/VolksliftPh'><i className="fa fa-facebook-official " aria-hidden="true"></i> Facebook</a> | <a className="text-white" href='#'><i className="fa fa-youtube text-white" aria-hidden="true"></i> Youtube </a> | 
                   <a className="text-white" href='#'><i className="fa fa-twitter " aria-hidden="true"></i> Twitter </a> | <a className="text-white" href='#'><i className="fa fa-linkedin text-white" aria-hidden="true"></i> Linkedin</a>
                 </Col>
               
